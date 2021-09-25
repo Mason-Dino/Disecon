@@ -1,4 +1,12 @@
+import inspect
 import sqlite3
+from inspect import getframeinfo
+from inspect import stack
+
+def debuginfo():
+    caller = getframeinfo(stack()[1][0])
+    
+    return f"\nFile - {caller.filename} \nLine - {caller.lineno}"
 
 def start():
     conn = sqlite3.connect("economy.db")
