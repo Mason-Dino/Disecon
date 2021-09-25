@@ -1,4 +1,12 @@
+import inspect
 import sqlite3
+from inspect import getframeinfo
+from inspect import stack
+
+def debuginfo():
+    caller = getframeinfo(stack()[1][0])
+    
+    return f"\nFile - {caller.filename} \nLine - {caller.lineno}"
 
 def start():
     conn = sqlite3.connect("economy.db")
@@ -66,8 +74,18 @@ class view:
         self.user_Name = user_Name
         
     def wallet(self):
-        pass
-    
+        #both don't work
+        if self.user_ID == None and self.user_Name == None:
+            print(f"Nothing is in the view function {debuginfo()}")
+        
+        #user name works but user ID doesn't work
+        elif self.user_ID == None:
+            print("user_ID")
+        
+        #user ID works but user Name doesn't    
+        elif self.user_Name == None:
+            print("user_name") 
+
     def bank(self):
         pass
         
@@ -83,11 +101,11 @@ c = conn.cursor()
 
 conn.commit()
 conn.close()
-
-
         
         
 someting = wallet(10, 638092957756555291, f"LegosAndStuff#0501")
 
 print(someting.add())
-print(wallet.amount)
+
+sun = view(user_Name=638092957756555291)
+print(sun.wallet())
