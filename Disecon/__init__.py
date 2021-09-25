@@ -25,3 +25,20 @@ def start():
     
     print(error)
 
+class wallet:
+    def __init__(self, user_ID, amount):
+        self.user_ID =  user_ID
+        self.amount = amount
+        
+    def add(self):
+        print(wallet.amount)
+        
+    def sub(self):
+        wallet.amount = wallet.amount - 100
+        print(wallet.amount)
+        
+    def sub_test(user_ID, amount):
+        print(wallet.sub_test)
+        print("hi")
+        
+wallet.sub_test(638092957756555291, 10)
