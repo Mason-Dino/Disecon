@@ -6,7 +6,7 @@ def start():
     
     try:
         c.execute("""CREATE TABLE economy (
-            user_ID text,
+            user_ID int,
             user_name text,
             wallet int,
             bank int,
@@ -26,19 +26,68 @@ def start():
     print(error)
 
 class wallet:
-    def __init__(self, user_ID, amount):
+    def __init__(self, amount: int, user_ID, user_Name):
+        self.user_Name = user_Name
         self.user_ID =  user_ID
         self.amount = amount
         
     def add(self):
-        print(wallet.amount)
+        conn = sqlite3.connect("economy.db")
+        c = conn.cursor()
+        
+        c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
+        
+        items = c.fetchall()
+        none = str(items)
+        
+        if none == "[]":
+            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, '{self.user_Name}', {self.amount} , 0, 0)")
+            print("made") #test part#
+            
+        else:
+            for item in items:
+                wallet = int(item[2])
+                
+            sum = self.amount + wallet
+            
+            c.execute(f"""UPDATE economy SET wallet = {sum}
+                    WHERE user_ID = {self.user_ID}  
+                """)
+            
+            conn.commit()
         
     def sub(self):
         wallet.amount = wallet.amount - 100
         print(wallet.amount)
         
-    def sub_test(user_ID, amount):
-        print(wallet.sub_test)
-        print("hi")
+class view:
+    def __init__(self, user_ID=None, user_Name=None):
+        self.user_ID = user_ID
+        self.user_Name = user_Name
         
-wallet.sub_test(638092957756555291, 10)
+    def wallet(self):
+        pass
+    
+    def bank(self):
+        pass
+        
+    def net(self):
+        pass
+        
+start()
+
+conn = sqlite3.connect("economy.db")
+c = conn.cursor()
+
+#c.execute(f"INSERT INTO economy VALUES (638092957756555291, 'LegosAndStuff#0501', 0 , 0, 0)")
+
+conn.commit()
+conn.close()
+
+
+        
+        
+someting = wallet(10, 638092957756555291, f"LegosAndStuff#0501")
+
+print(someting.add())
+print(wallet.amount)
