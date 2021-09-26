@@ -9,9 +9,8 @@ from inspect import stack
     #return f"\n   File - {caller.filename} \n      Line - {caller.lineno}"
 
 class view:
-    def __init__(self, user_ID=None, user_Name=None):
+    def __init__(self, user_ID=None):
         self.user_ID = user_ID
-        self.user_Name = user_Name
         
     def wallet(self):
         #user ID has none
