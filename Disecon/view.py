@@ -14,16 +14,12 @@ class view:
         self.user_Name = user_Name
         
     def wallet(self):
-        #both don't work
-        if self.user_ID == None and self.user_Name == None:
-            print(f"Nothing is in the view function")
-        
-        #user name works but user ID doesn't work
-        elif self.user_ID == None:
+        #user ID has none
+        if self.user_ID == None:
             print("user_ID")
         
-        #user ID works but user Name doesn't    
-        elif self.user_Name == None:            
+        #User ID is there
+        else:            
             conn = sqlite3.connect("economy.db")
             c = conn.cursor()
             
