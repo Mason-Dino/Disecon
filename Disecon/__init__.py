@@ -1,6 +1,7 @@
 import inspect
 import sqlite3
 from view import *
+from wallet import *
 from inspect import getframeinfo
 from inspect import stack
 
@@ -33,13 +34,6 @@ def start():
     conn.close()
     
     print(error)
-
-        
-
-            
-class top:
-    def __init__(self, place:int):
-        pass
     
         
 start()
