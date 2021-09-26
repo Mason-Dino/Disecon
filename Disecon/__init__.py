@@ -76,8 +76,22 @@ class wallet:
             conn.close()
         
     def sub(self):
-        wallet.amount = wallet.amount - 100
-        print(wallet.amount)
+        conn = sqlite3("economy.db")
+        c = conn.cursor()
+        
+        c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
+        
+        items = c.fetchall()
+        none = str(items)
+        
+        if none == "[]":
+            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, '{self.user_Name}', 0 , 0, 0)")
+            
+            return None
+        
+        else:
+            for item in items:
+                pass
         
 class view:
     def __init__(self, user_ID=None, user_Name=None):
@@ -171,6 +185,7 @@ class view:
 class top:
     def __init__(self, place:int):
         pass
+    
         
 start()
 
