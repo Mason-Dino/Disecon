@@ -37,16 +37,12 @@ class view:
                 return wallet        
 
     def bank(self):
-        #both don't work
-        if self.user_ID == None and self.user_Name == None:
-            print(f"Nothing is in the view function {debuginfo()}")
-        
-        #user name works but user ID doesn't work
-        elif self.user_ID == None:
+        #user ID has none
+        if self.user_ID == None:
             print("user_ID")
         
-        #user ID works but user Name doesn't    
-        elif self.user_Name == None:            
+        #User ID is there
+        else:            
             conn = sqlite3.connect("economy.db")
             c = conn.cursor()
             
@@ -62,19 +58,15 @@ class view:
                 for item in items:
                     bank = item[3]
                     
-                return bank
+                return bank   
         
     def net(self):
-        #both don't work
-        if self.user_ID == None and self.user_Name == None:
-            print(f"Nothing is in the view function {debuginfo()}")
-        
-        #user name works but user ID doesn't work
-        elif self.user_ID == None:
+        #user ID has none
+        if self.user_ID == None:
             print("user_ID")
         
-        #user ID works but user Name doesn't    
-        elif self.user_Name == None:            
+        #User ID is there
+        else:            
             conn = sqlite3.connect("economy.db")
             c = conn.cursor()
             
@@ -90,4 +82,4 @@ class view:
                 for item in items:
                     net = item[4]
                     
-                return net
+                return net   

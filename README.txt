@@ -1,0 +1,1 @@
+This is a library that can be for a discord python library for a simple economy system.
