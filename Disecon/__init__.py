@@ -1,7 +1,7 @@
 import inspect
 import sqlite3
-from view import *
-from wallet import *
+from .view import *
+from .wallet import *
 from inspect import getframeinfo
 from inspect import stack
 
