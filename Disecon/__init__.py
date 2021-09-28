@@ -14,26 +14,20 @@ def start():
     conn = sqlite3.connect("economy.db")
     c = conn.cursor()
     
-    try:
-        c.execute("""CREATE TABLE economy (
+
+    c.execute("""CREATE TABLE economy (
             user_ID int,
             user_name text,
             wallet int,
             bank int,
             net int
             
-        )""")
-        
-        error = "The database was made."
-        
-    except:
-        error = "The database was not made."
+    )""")
         
     
     conn.commit()
     conn.close()
-    
-    print(error)
+
     
         
 start()
@@ -47,12 +41,12 @@ conn.commit()
 conn.close()
         
         
-something = wallet(100, 638092957756555291, f"LegosAndStuff#0501")
+#something = wallet(100, 638092957756555291, f"LegosAndStuff#0501")
 
 #something.add()
 
 #sun = view(user_ID=638092957756555291)
-sun = view()
-print(sun.wallet())
-print(sun.bank())
-print(sun.net())
+#sun = view()
+#print(sun.wallet())
+#print(sun.bank())
+#print(sun.net())
