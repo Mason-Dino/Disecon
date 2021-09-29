@@ -17,6 +17,10 @@ class wallet:
         
         if none == "[]":
             c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, '{self.user_Name}', {self.amount} , 0, {self.amount})")
+            
+            conn.commit()
+            conn.close()
+            
             print("made") #test part#
             
         else:
