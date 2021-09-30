@@ -7,7 +7,6 @@ def start():
     try:
         c.execute("""CREATE TABLE economy (
                 user_ID int,
-                user_name text,
                 wallet int,
                 bank int,
                 net int
