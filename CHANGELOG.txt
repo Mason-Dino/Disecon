@@ -5,3 +5,11 @@ Change Log
 ----------------
 - First Release
 - Added basic Function
+
+0.0.2 - 0.0.4
+----------------
+- Fixing bugs in testing
+
+0.0.5
+----------------
+- Added Bank Class with same function as wallet class
