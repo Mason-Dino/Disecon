@@ -60,6 +60,6 @@ class top:
         items = c.fetchall()
         
         for item in items:
-            net = int(item[0])
+            net = int(item[4])
             
         return net
