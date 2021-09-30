@@ -17,3 +17,11 @@ Change Log
 0.0.6
 ----------------
 - Added function to the top class
+
+0.1.0
+----------------
+- Tested top class
+
+0.1.1
+----------------
+- Removed user_Name in the economy
