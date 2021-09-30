@@ -13,3 +13,7 @@ Change Log
 0.0.5
 ----------------
 - Added Bank Class with same function as wallet class
+
+0.0.6
+----------------
+- Added function to the top class
