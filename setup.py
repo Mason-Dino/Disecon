@@ -10,12 +10,11 @@ classifiers = [
  
 setup(
   name='Disecon',
-  version='0.0.3',
+  version='0.0.5',
   description='Disecon',
   long_description='Disecon is a python library that is too build off any discord python library.',
   url='',  
   author='LegosAndStuff',
-  author_email='legosandotherstuff@gmail.com',
   license='MIT', 
   classifiers=classifiers,
   keywords='economy', 
