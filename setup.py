@@ -10,7 +10,7 @@ classifiers = [
  
 setup(
   name='Disecon',
-  version='0.1.0',
+  version='0.1.1',
   description='Disecon',
   long_description='Disecon is a python library that is too build off any discord python library.',
   url='',  
