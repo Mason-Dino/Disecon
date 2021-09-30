@@ -32,7 +32,7 @@ class top:
         items = c.fetchall()
         
         for item in items:
-            wallet = int(item[2])
+            wallet = int(item[1])
             
         return wallet
         
@@ -47,7 +47,7 @@ class top:
         items = c.fetchall()
         
         for item in items:
-            bank = int(item[4])
+            bank = int(item[2])
             
         return bank
     
@@ -62,6 +62,6 @@ class top:
         items = c.fetchall()
         
         for item in items:
-            net = int(item[4])
+            net = int(item[3])
             
         return net

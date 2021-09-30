@@ -1,8 +1,7 @@
 import sqlite3
 
 class bank:
-    def __init__(self, amount: int, user_ID, user_Name):
-        self.user_Name = user_Name
+    def __init__(self, amount: int, user_ID):
         self.user_ID =  user_ID
         self.amount = amount
         
@@ -16,7 +15,7 @@ class bank:
         none = str(items)
         
         if none == "[]":
-            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, '{self.user_Name}', 0 , {self.amount}, {self.amount})")
+            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, 0 , {self.amount}, {self.amount})")
             
             conn.commit()
             conn.close()
@@ -56,7 +55,7 @@ class bank:
         none = str(items)
         
         if none == "[]":
-            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, '{self.user_Name}', 0 , 0, 0)")
+            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, 0 , 0, 0)")
             
             return None
         

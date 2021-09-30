@@ -32,7 +32,7 @@ class view:
             
             else:
                 for item in items:
-                    wallet = item[2]
+                    wallet = item[1]
                     
                 return wallet        
 
@@ -56,7 +56,7 @@ class view:
             
             else:
                 for item in items:
-                    bank = item[3]
+                    bank = item[2]
                     
                 return bank   
         
@@ -80,6 +80,6 @@ class view:
             
             else:
                 for item in items:
-                    net = item[4]
+                    net = item[3]
                     
                 return net   
