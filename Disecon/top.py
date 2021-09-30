@@ -1,3 +1,5 @@
+#Allows you to see people at diffrent places
+
 import sqlite3
 
 class top:
