@@ -25,3 +25,7 @@ Change Log
 0.1.1
 ----------------
 - Removed user_Name in the economy
+
+0.1.2
+----------------
+- Updated code for the removed user_Name in database
