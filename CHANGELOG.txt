@@ -29,3 +29,7 @@ Change Log
 0.1.2
 ----------------
 - Updated code for the removed user_Name in database
+
+0.1.3
+----------------
+- Added code to the sub part of the wallet class
