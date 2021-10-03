@@ -61,4 +61,28 @@ class wallet:
         
         else:
             for item in items:
-                pass
+                wallet = int(item[1])
+                bank = int(item[2])
+                
+            if wallet >= self.amount:
+                sum = wallet - self.amount
+                net = sum + bank
+                
+                c.execute(f"""UPDATE economy SET wallet = {sum}
+                        WHERE user_ID = {self.user_ID}  
+                    """)
+                
+                conn.commit()
+                
+                c.execute(f"""UPDATE economy SET net = {net}
+                        WHERE user_ID = {self.user_ID}
+                    """)
+                
+                conn.commit()
+                conn.close()
+            
+            elif wallet < self.amount:
+                return None
+            
+            else:
+                return None
