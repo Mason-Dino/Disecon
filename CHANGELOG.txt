@@ -33,3 +33,7 @@ Change Log
 0.1.3
 ----------------
 - Added code to the sub part of the wallet class
+
+0.1.4 - ?
+----------------
+- Fixing bugs
