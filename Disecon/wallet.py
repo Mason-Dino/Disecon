@@ -26,9 +26,13 @@ class wallet:
             for item in items:
                 wallet = int(item[2])
                 bank = int(item[3])
-
+                
+            print(wallet)
+            print(self.amount)
                 
             sum = self.amount + wallet
+            
+            print(sum)
             
             c.execute(f"""UPDATE economy SET wallet = {sum}
                     WHERE user_ID = {self.user_ID}  
