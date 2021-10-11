@@ -17,7 +17,7 @@ setup(
   version='0.1.9',
   description='Disecon',
   long_description=readme,
-  long_description_content_type="md",
+  long_description_content_type="text/markdown",
   url='',  
   author='LegosAndStuff',
   license='MIT', 
