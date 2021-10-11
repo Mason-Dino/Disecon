@@ -37,3 +37,7 @@ Change Log
 0.1.4 - 0.1.6
 ----------------
 - Fixing bugs
+
+0.1.7
+----------------
+- Found the bug while added to the database and doing some testing
