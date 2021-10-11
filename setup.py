@@ -1,5 +1,9 @@
 from setuptools import setup, find_packages
- 
+
+readme = ""
+with open("README.md") as f:
+  readme = f.read
+
 classifiers = [
   'Development Status :: 4 - Beta',
   'Intended Audience :: Developers',
@@ -12,7 +16,8 @@ setup(
   name='Disecon',
   version='0.1.8',
   description='Disecon',
-  long_description='Disecon is a python library that is too build off any discord python library.',
+  long_description=readme,
+  long_description_content_type="md",
   url='',  
   author='LegosAndStuff',
   license='MIT', 
