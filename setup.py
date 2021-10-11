@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 readme = ""
 with open("README.md") as f:
-  readme = f.read
+  readme = f.read()
 
 classifiers = [
   'Development Status :: 4 - Beta',
