@@ -41,3 +41,7 @@ Change Log
 0.1.7
 ----------------
 - Found the bug while added to the database and doing some testing
+
+0.1.8
+----------------
+- Added a connection to database in wallet class
