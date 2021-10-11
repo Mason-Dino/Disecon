@@ -34,6 +34,6 @@ Change Log
 ----------------
 - Added code to the sub part of the wallet class
 
-0.1.4 - ?
+0.1.4 - 0.1.6
 ----------------
 - Fixing bugs
