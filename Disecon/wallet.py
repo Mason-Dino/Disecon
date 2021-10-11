@@ -24,8 +24,8 @@ class wallet:
             
         else:
             for item in items:
-                wallet = int(item[2])
-                bank = int(item[3])
+                wallet = int(item[1])
+                bank = int(item[2])
             
             print("--------")    
             print(wallet)
