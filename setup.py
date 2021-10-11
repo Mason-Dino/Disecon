@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
+import pathlib
 
-readme = ""
-with open("README.md") as f:
-  readme = f.read()
+here = pathlib.Path(__file__).parent.resolve()
+readme = (here / 'README.md').read_text(encoding='utf-8')
 
 classifiers = [
   'Development Status :: 4 - Beta',
@@ -14,7 +14,7 @@ classifiers = [
  
 setup(
   name='Disecon',
-  version='0.1.10',
+  version='0.1.11',
   description='Disecon',
   long_description=readme,
   long_description_content_type="text/markdown",
