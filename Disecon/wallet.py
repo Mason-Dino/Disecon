@@ -45,7 +45,7 @@ class wallet:
             conn.close()
         
     def sub(self):
-        conn = sqlite3("economy.db")
+        conn = sqlite3.connect("economy.db")
         c = conn.cursor()
         
         c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
