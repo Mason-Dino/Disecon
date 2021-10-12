@@ -14,7 +14,7 @@ classifiers = [
  
 setup(
   name='Disecon',
-  version='0.1.11',
+  version='0.2.0',
   description='Disecon',
   long_description=readme,
   long_description_content_type="text/markdown",
