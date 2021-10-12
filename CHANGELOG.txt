@@ -45,3 +45,11 @@ Change Log
 0.1.8
 ----------------
 - Added a connection to database in wallet class
+
+0.1.9 - 0.1.11
+----------------
+- Trying to have README.md on the pypi
+
+0.2.0
+----------------
+- Tested wallet and it al worked
