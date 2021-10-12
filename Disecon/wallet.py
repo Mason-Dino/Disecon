@@ -1,3 +1,5 @@
+#tested  wallet class with adding and subtracting and it all worked:
+
 import sqlite3
 
 class wallet:
