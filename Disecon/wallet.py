@@ -22,8 +22,6 @@ class wallet:
             conn.commit()
             conn.close()
             
-            print("made") #test part#
-            
         else:
             for item in items:
                 wallet = int(item[1])
