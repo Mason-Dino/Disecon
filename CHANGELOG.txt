@@ -53,3 +53,7 @@ Change Log
 0.2.0
 ----------------
 - Tested wallet and it al worked
+
+0.2.1
+----------------
+- Added sub function in bank class
