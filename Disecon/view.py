@@ -3,11 +3,6 @@ import sqlite3
 from inspect import getframeinfo
 from inspect import stack
 
-#def debuginfo():
-    #caller = getframeinfo(stack()[1][0])
-    
-    #return f"\n   File - {caller.filename} \n      Line - {caller.lineno}"
-
 class view:
     def __init__(self, user_ID=None):
         self.user_ID = user_ID
