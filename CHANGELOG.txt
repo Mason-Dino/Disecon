@@ -77,3 +77,7 @@ Change Log
 0.5.1
 ----------------
 - Testing different things with view
+
+0.5.2
+----------------
+- Added bank function to view
