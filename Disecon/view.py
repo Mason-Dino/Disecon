@@ -25,7 +25,7 @@ class view:
                     
             return wallet        
 
-    def wallet(self):                    
+    def bank(self):                    
         conn = sqlite3.connect("economy.db")
         c = conn.cursor()
             
