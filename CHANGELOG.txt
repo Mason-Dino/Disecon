@@ -52,7 +52,7 @@ Change Log
 
 0.2.0
 ----------------
-- Tested wallet and it al worked
+- Tested wallet and it all worked
 
 0.2.1
 ----------------
@@ -61,3 +61,7 @@ Change Log
 0.2.2
 ----------------
 - Added "connect" to line 46 bank.py
+
+0.3.0
+----------------
+- Tested bank and it all worked
