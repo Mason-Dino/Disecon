@@ -57,3 +57,7 @@ Change Log
 0.2.1
 ----------------
 - Added sub function in bank class
+
+0.2.2
+----------------
+- Added "connect" to line 46 bank.py
