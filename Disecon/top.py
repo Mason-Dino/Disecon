@@ -1,4 +1,4 @@
-#Allows you to see people at diffrent places
+#tested
 
 import sqlite3
 
