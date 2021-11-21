@@ -1,9 +1,11 @@
+#not working
+
 import inspect
 import sqlite3
 from inspect import getframeinfo
 from inspect import stack
 
-class view:
+class Disecon.view:
     def __init__(self, user_ID=None):
         self.user_ID = user_ID
         
