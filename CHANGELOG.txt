@@ -85,3 +85,7 @@ Change Log
 0.6.0
 ----------------
 - Tested view class and it all worked
+
+0.6.1
+----------------
+- View class start to not work, changed view class status
