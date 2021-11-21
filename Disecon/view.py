@@ -5,8 +5,8 @@ import sqlite3
 from inspect import getframeinfo
 from inspect import stack
 
-class Disecon.view:
-    def __init__(self, user_ID=None):
+class Disecon_view:
+    def __init__(self, user_ID:int =None):
         self.user_ID = user_ID
         
     def wallet(self):                    
