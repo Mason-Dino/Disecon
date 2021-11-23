@@ -3,5 +3,3 @@ from .wallet import *
 from .bank import *
 from .start import *
 from .top import *
-
-#disecon
