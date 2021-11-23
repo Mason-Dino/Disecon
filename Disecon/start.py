@@ -3,6 +3,9 @@
 import sqlite3
 
 class Disecon:
+    def __init__(self):
+        pass
+    
     def start():
         conn = sqlite3.connect("economy.db")
         c = conn.cursor()
