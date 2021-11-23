@@ -98,3 +98,7 @@ Change Log
 ----------------
 - Testing with view class worked
 - Testing different things with top class
+
+0.6.4
+----------------
+- Testing putting all under a Disecon class to see if it works
