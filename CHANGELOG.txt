@@ -102,3 +102,7 @@ Change Log
 0.6.4
 ----------------
 - Testing putting all under a Disecon class to see if it works
+
+0.6.5
+----------------
+- Added "__init__" into Disecon class in start .py
