@@ -106,3 +106,7 @@ Change Log
 0.6.5
 ----------------
 - Added "__init__" into Disecon class in start .py
+
+0.6.6
+----------------
+- Removed Disecon class in start.py file
