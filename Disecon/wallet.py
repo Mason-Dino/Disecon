@@ -2,41 +2,76 @@
 
 import sqlite3
 
-class Disecon:
-    class wallet:
-        def __init__(self, amount: int, user_ID):
-            self.user_ID =  user_ID
-            self.amount = amount
+class wallet:
+    def __init__(self, amount: int, user_ID):
+        self.user_ID =  user_ID
+        self.amount = amount
+        
+    def add(self):
+        conn = sqlite3.connect("economy.db")
+        c = conn.cursor()
+        
+        c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
+        
+        items = c.fetchall()
+        none = str(items)
+        
+        if none == "[]":
+            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, {self.amount} , 0, {self.amount})")
             
-        def add(self):
-            conn = sqlite3.connect("economy.db")
-            c = conn.cursor()
+            conn.commit()
+            conn.close()
             
-            c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
-            
-            items = c.fetchall()
-            none = str(items)
-            
-            if none == "[]":
-                c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, {self.amount} , 0, {self.amount})")
+        else:
+            for item in items:
+                wallet = int(item[1])
+                bank = int(item[2])
                 
-                conn.commit()
-                conn.close()
+            sum = self.amount + wallet
+            
+            c.execute(f"""UPDATE economy SET wallet = {sum}
+                    WHERE user_ID = {self.user_ID}  
+                """)
+            
+            conn.commit()
+            
+            net = sum + bank
+            
+            c.execute(f"""UPDATE economy SET net = {net}
+                    WHERE user_ID = {self.user_ID}
+                """)
+            
+            conn.commit()
+            conn.close()
+        
+    def sub(self):
+        conn = sqlite3.connect("economy.db")
+        c = conn.cursor()
+        
+        c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
+        
+        items = c.fetchall()
+        none = str(items)
+        
+        if none == "[]":
+            c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, 0 , 0, 0)")
+            
+            return None
+        
+        else:
+            for item in items:
+                wallet = int(item[1])
+                bank = int(item[2])
                 
-            else:
-                for item in items:
-                    wallet = int(item[1])
-                    bank = int(item[2])
-                    
-                sum = self.amount + wallet
+            if wallet >= self.amount:
+                sum = wallet - self.amount
+                net = sum + bank
                 
                 c.execute(f"""UPDATE economy SET wallet = {sum}
                         WHERE user_ID = {self.user_ID}  
                     """)
                 
                 conn.commit()
-                
-                net = sum + bank
                 
                 c.execute(f"""UPDATE economy SET net = {net}
                         WHERE user_ID = {self.user_ID}
@@ -45,44 +80,8 @@ class Disecon:
                 conn.commit()
                 conn.close()
             
-        def sub(self):
-            conn = sqlite3.connect("economy.db")
-            c = conn.cursor()
-            
-            c.execute(f"SELECT * FROM economy WHERE user_ID={self.user_ID}")
-            
-            items = c.fetchall()
-            none = str(items)
-            
-            if none == "[]":
-                c.execute(f"INSERT INTO economy VALUES ({self.user_ID}, 0 , 0, 0)")
-                
+            elif wallet < self.amount:
                 return None
             
             else:
-                for item in items:
-                    wallet = int(item[1])
-                    bank = int(item[2])
-                    
-                if wallet >= self.amount:
-                    sum = wallet - self.amount
-                    net = sum + bank
-                    
-                    c.execute(f"""UPDATE economy SET wallet = {sum}
-                            WHERE user_ID = {self.user_ID}  
-                        """)
-                    
-                    conn.commit()
-                    
-                    c.execute(f"""UPDATE economy SET net = {net}
-                            WHERE user_ID = {self.user_ID}
-                        """)
-                    
-                    conn.commit()
-                    conn.close()
-                
-                elif wallet < self.amount:
-                    return None
-                
-                else:
-                    return None
+                return None
