@@ -116,4 +116,5 @@ Change Log
 - Removed none option in view file/class
 - Removed Disecon class in view
 - Removed Disecon class from bank
-- Removed Disecon calss from wallet
+- Removed Disecon class from wallet
+- Removed Disecon c from top
