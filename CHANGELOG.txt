@@ -110,3 +110,10 @@ Change Log
 0.6.6
 ----------------
 - Removed Disecon class in start.py file
+
+0.6.7
+----------------
+- Removed none option in view file/class
+- Removed Disecon class in view
+- Removed Disecon class from bank
+- Removed Disecon calss from wallet
