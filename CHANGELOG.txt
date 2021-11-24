@@ -118,3 +118,10 @@ Change Log
 - Removed Disecon class from bank
 - Removed Disecon class from wallet
 - Removed Disecon c from top
+
+0.6.8
+---------------- 
+- Combine bank and wallet into one file
+- Combine top and view into one file
+- Removed Imports
+- Added Imports
