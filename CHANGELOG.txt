@@ -125,3 +125,7 @@ Change Log
 - Combine top and view into one file
 - Removed Imports
 - Added Imports
+
+0.6.9
+----------------
+- Testing negative values for subtracting
