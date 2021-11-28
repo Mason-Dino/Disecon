@@ -80,7 +80,21 @@ class money:
                     conn.close()
                 
                 elif wallet < self.amount:
-                    return None
+                    sum = wallet - self.amount
+                    net = sum + bank
+                    
+                    c.execute(f"""UPDATE economy SET wallet = {sum}
+                                    WHERE user_ID = {self.user_ID}
+                            """)
+                    
+                    conn.commit()
+                    
+                    c.execute(f"""UPDATE economy SET net = {net}
+                                WHERE user_ID = {self.user_ID}
+                        """)
+                    
+                    conn.commit()
+                    conn.close()
                 
                 else:
                     return None
@@ -164,7 +178,21 @@ class money:
                     conn.close()
                 
                 elif bank < self.amount:
-                    return None
+                    sum = bank - self.amount
+                    net = sum + wallet
+                    
+                    c.execute(f"""UPDATE economy SET bank = {sum}
+                                    WHERE user_ID = {self.user_ID}
+                            """)
+                    
+                    conn.commit()
+                    
+                    c.execute(f"""UPDATE economy SET net = {net}
+                                WHERE user_ID = {self.user_ID}
+                        """)
+                    
+                    conn.commit()
+                    conn.close()
                 
                 else:
                     return None
