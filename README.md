@@ -37,7 +37,7 @@ If you want to add some money into someones wallet you can follow the example be
 ```python
 from Disecon import *
 
-wallet = wallet(amount=100, user_ID=Discord User ID)
+wallet = money.wallet(amount=100, user_ID=Discord User ID)
 
 wallet.add()
 ```
@@ -47,7 +47,7 @@ If you want to add some money into somones bank you can follow the example bello
 ```python
 from Disecon import *
 
-bank = bank(amount=100, user_ID=Discord User ID)
+bank = money.bank(amount=100, user_ID=Discord User ID)
 
 bank.add()
 ```
@@ -59,7 +59,7 @@ If you want to subract money from somones wallet do the following example bellow
 ```python
 from Disecon import *
 
-wallet = wallet(amount=100, user_ID=Disecon User ID)
+wallet = money.wallet(amount=100, user_ID=Disecon User ID)
 
 wallet.sub()
 ```
@@ -69,15 +69,7 @@ If you want to subract money from someones bank you could follow the example bel
 ```python
 from Disecon import *
 
-bank = bank(amount=100, user_ID=Discord User ID)
+bank = money.bank(amount=100, user_ID=Discord User ID)
 
 bank.sub()
 ```
-
-## Example
-
-I'm going to show a little of how Disecon would work if you will download the library.
-
-```python
-import discord
-from Disecon import *
