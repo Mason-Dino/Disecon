@@ -129,3 +129,7 @@ Change Log
 0.6.9
 ----------------
 - Testing negative values for subtracting
+
+0.6.10
+----------------
+- Updated README file so its up to date
