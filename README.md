@@ -54,7 +54,7 @@ bank.add()
 
 ### Subtracting money
 
-If you want to subtract money from someones wallet do the following example bellow.
+If you want to subtract money from someones wallet do the following example below.
 
 ```python
 from Disecon import *
@@ -64,7 +64,7 @@ wallet = money.wallet(amount=100, user_ID=Disecon User ID)
 wallet.sub()
 ```
 
-If you want to subtract money from someones bank you could follow the example bellow.
+If you want to subtract money from someones bank you could follow the example below.
 
 ```python
 from Disecon import *
@@ -72,4 +72,33 @@ from Disecon import *
 bank = money.bank(amount=100, user_ID=Discord User ID)
 
 bank.sub()
+```
+
+### Viewing User Info
+
+If you want to view someones wallet, bank or net follow the example below.
+
+```python
+from Disecon import *
+
+view = results.view(user_ID=Discord User ID)
+
+view.wallet()
+view.bank()
+view.net()
+```
+
+### Leaderboard Info
+
+If you want to see who's in a certain place and git user id, net, wallet and bank you can follow the example below.
+
+```python
+from Disecon import *
+
+top = results.top(place=1)
+
+top.user_ID()
+top.net()
+top.wallet()
+top.bank()
 ```
