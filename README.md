@@ -83,9 +83,9 @@ from Disecon import *
 
 view = results.view(user_ID=Discord User ID)
 
-view.wallet()
-view.bank()
-view.net()
+print(view.wallet())
+print(view.bank())
+print(view.net())
 ```
 
 ### Leaderboard Info
@@ -97,8 +97,8 @@ from Disecon import *
 
 top = results.top(place=1)
 
-top.user_ID()
-top.net()
-top.wallet()
-top.bank()
+print(top.user_ID())
+print(top.net())
+print(top.wallet())
+print(top.bank())
 ```
