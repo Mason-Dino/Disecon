@@ -18,7 +18,7 @@ pip install Disecon
 
 python3 -m pip install Disecon
 ```
-## Useage
+## Usage
 
 ### Starting Disecon
 
@@ -42,7 +42,7 @@ wallet = money.wallet(amount=100, user_ID=Discord User ID)
 wallet.add()
 ```
 
-If you want to add some money into somones bank you can follow the example bellow to add some money. 
+If you want to add some money into someones bank you can follow the example bellow to add some money. 
 
 ```python
 from Disecon import *
@@ -52,9 +52,9 @@ bank = money.bank(amount=100, user_ID=Discord User ID)
 bank.add()
 ```
 
-### Subracting money
+### Subtracting money
 
-If you want to subract money from somones wallet do the following example bellow.
+If you want to subtract money from someones wallet do the following example bellow.
 
 ```python
 from Disecon import *
@@ -64,7 +64,7 @@ wallet = money.wallet(amount=100, user_ID=Disecon User ID)
 wallet.sub()
 ```
 
-If you want to subract money from someones bank you could follow the example bellow.
+If you want to subtract money from someones bank you could follow the example bellow.
 
 ```python
 from Disecon import *
