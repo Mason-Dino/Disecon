@@ -133,3 +133,7 @@ Change Log
 0.6.10
 ----------------
 - Updated README file so its up to date
+
+1.0.0
+----------------
+- It has been stable just making it 1.0.0
