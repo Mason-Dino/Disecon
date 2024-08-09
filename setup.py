@@ -18,7 +18,7 @@ setup(
   description='Disecon',
   long_description=readme,
   long_description_content_type="text/markdown",
-  url='',  
+  url='https://github.com/Mason-Dino/Disecon',  
   author='LegosAndStuff',
   license='MIT', 
   classifiers=classifiers,
