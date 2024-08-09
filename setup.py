@@ -9,7 +9,7 @@ classifiers = [
   'Intended Audience :: Developers',
   'Operating System :: OS Independent',
   'License :: OSI Approved :: MIT License',
-  'Programming Language :: Python :: 3'
+  'Programming Language :: Python :: 3.12'
 ]
 
 setup(
